@@ -4,6 +4,8 @@
 
 #include <iostream>
 #include <vector>
+#include <stack>
+
 using namespace std;
 
 vector<int> list;
@@ -29,13 +31,39 @@ void product(vector<int> list){
     cout << "product: " << prod << endl;
 }
 
+vector<int> reverse(vector<int> list){
+    stack<int> stack;
+    vector<int> reverse;
+
+    for(int i = 0; i < list.size(); i++){
+        stack.push(list[i]);
+    }
+
+    while (!stack.empty()){
+        reverse.push_back(stack.top());
+        stack.pop();
+    }
+
+    return reverse;
+}
+
 int main(){
     int temp;
+    vector<int> x;
 
     while(cin >> temp){
         list.push_back(temp);
     }
 
     sum(list);
+
     product(list);
+
+    x = reverse(list);
+    cout << "reverse: ";
+    for (int i = 0; i < x.size(); i++){
+        cout << x[i] << " ";
+    }
+    cout << endl;
+
 }
