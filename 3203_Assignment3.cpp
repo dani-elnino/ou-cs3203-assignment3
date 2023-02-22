@@ -15,7 +15,7 @@ void sum(vector<int> list){
         sum = sum + list[i];
     }
 
-    cout << "sum = " << sum;
+    cout << "sum: " << sum << endl;
 }
 
 void product(vector<int> list){
@@ -26,5 +26,16 @@ void product(vector<int> list){
         prod = prod * list[i];
     }
 
-    cout << "product: " << prod;
+    cout << "product: " << prod << endl;
+}
+
+int main(){
+    int temp;
+
+    while(cin >> temp){
+        list.push_back(temp);
+    }
+
+    sum(list);
+    product(list);
 }
