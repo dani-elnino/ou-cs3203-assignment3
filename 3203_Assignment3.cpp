@@ -17,3 +17,14 @@ void sum(vector<int> list){
 
     cout << "sum = " << sum;
 }
+
+void product(vector<int> list){
+    int prod = 0;
+
+    prod = list[0];
+    for(int i = 1; i < list.size(); i++){
+        prod = prod * list[i];
+    }
+
+    cout << "product: " << prod;
+}
