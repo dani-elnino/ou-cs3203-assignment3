@@ -49,11 +49,21 @@ vector<int> reverse(vector<int> list){
 
 int main(){
     int temp;
+    vector<int> x;
 
     while(cin >> temp){
         list.push_back(temp);
     }
 
     sum(list);
+
     product(list);
+
+    x = reverse(list);
+    cout << "reverse: ";
+    for (int i = 0; i < x.size(); i++){
+        cout << x[i] << " ";
+    }
+    cout << endl;
+
 }
